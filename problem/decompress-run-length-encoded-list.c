@@ -4,11 +4,9 @@
 
 int *decompressRLElist(int *nums, int numsSize, int *returnSize) {
     int *result = (int *) malloc(sizeof(int) * numsSize);
-    int count = 0;
-    int innerCount = 0;
     *returnSize = 0;
-    for (; count < numsSize; count = count + 2) {
-        for (; innerCount < nums[count]; innerCount++) {
+    for (int count = 0; count < numsSize; count = count + 2) {
+        for (int innerCount = 0; innerCount < nums[count]; innerCount++) {
             result[*returnSize] = nums[count + 1];
             ++*returnSize;
         }

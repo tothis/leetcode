@@ -12,10 +12,9 @@ int main() {
 
     size_t size = sizeof(arr) / 4 - 1;
 
-    int i = 0, j = 0;
-    for (; i < size; i++) {
+    for (int i = 0; i < size; i++) {
         flag = 1;
-        for (; j < size - i; j++) {
+        for (int j = 0; j < size - i; j++) {
             if (arr[j] > arr[j + 1]) {
                 temp = arr[j];
                 arr[j] = arr[j + 1];
