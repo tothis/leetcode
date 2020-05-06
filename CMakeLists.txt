@@ -7,5 +7,13 @@ project(algorithm C)
 set(CMAKE_C_STANDARD 11)
 
 # 生成可执行文件
-add_executable(multiply multiply.c)
-add_executable(shuffle shuffle.c)
+add_executable(algorithm-multiplication-table algorithm/multiplication-table.c)
+add_executable(algorithm-shuffle algorithm/shuffle.c)
+add_executable(algorithm-fibonacci-sequence algorithm/fibonacci-sequence.c)
+add_executable(algorithm-bubble-sort algorithm/bubble-sort.c)
+
+add_executable(happy-number problem/happy-number.c)
+add_executable(number-of-steps-to-reduce-a-number-to-zero problem/number-of-steps-to-reduce-a-number-to-zero.c)
+add_executable(subtract-the-product-and-sum-of-digits-of-an-integer problem/subtract-the-product-and-sum-of-digits-of-an-integer.c)
+add_executable(jewels-and-stones problem/jewels-and-stones.c)
+add_executable(decompress-run-length-encoded-list problem/decompress-run-length-encoded-list.c)

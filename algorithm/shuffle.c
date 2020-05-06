@@ -6,8 +6,8 @@
 
 int main() {
     int poker[N + 1];
-    int i, j, tmp, remain;
-    // 初始化阵列
+    int i, j, tmp, card;
+
     for (i = 1; i <= N; i++)
         poker[i] = i;
     srand(time(0));
@@ -19,7 +19,7 @@ int main() {
         poker[j] = tmp;
     }
     for (i = 1; i <= N; i++) {
-        // 判断花色
+        // 花色
         switch ((poker[i] - 1) / 13) {
             case 0:
                 printf("桃");
@@ -34,9 +34,9 @@ int main() {
                 printf("梅");
                 break;
         }
-        // 扑克牌数字
-        remain = poker[i] % 13;
-        switch (remain) {
+        // 牌面数字
+        card = poker[i] % 13;
+        switch (card) {
             case 0:
                 printf("K ");
                 break;
@@ -47,18 +47,16 @@ int main() {
                 printf("J ");
                 break;
             default:
-                printf("%d ", remain);
+                printf("%d ", card);
                 break;
         }
         if (i % 13 == 0)
             printf("\n");
     }
 
-
-
     i = 1;
-    while(i < 10) {
-        i *=   2;
+    while (i < 10) {
+        i *= 2;
     }
     return 0;
 }
