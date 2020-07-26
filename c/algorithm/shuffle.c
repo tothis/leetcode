@@ -11,7 +11,7 @@ int main() {
     for (i = 1; i <= N; i++)
         poker[i] = i;
     srand(time(0));
-    // Ï´ÅÆ
+    // æ´—ç‰Œ
     for (i = 1; i <= N; i++) {
         j = rand() % 52 + 1;
         tmp = poker[i];
@@ -19,22 +19,22 @@ int main() {
         poker[j] = tmp;
     }
     for (i = 1; i <= N; i++) {
-        // »¨É«
+        // èŠ±è‰²
         switch ((poker[i] - 1) / 13) {
             case 0:
-                printf("ÌÒ");
+                printf("æ¡ƒ");
                 break;
             case 1:
-                printf("ÐÄ");
+                printf("å¿ƒ");
                 break;
             case 2:
-                printf("×©");
+                printf("ç –");
                 break;
             case 3:
-                printf("Ã·");
+                printf("æ¢…");
                 break;
         }
-        // ÅÆÃæÊý×Ö
+        // ç‰Œé¢æ•°å­—
         card = poker[i] % 13;
         switch (card) {
             case 0:
